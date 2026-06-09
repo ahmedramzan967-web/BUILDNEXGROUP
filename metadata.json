@@ -1,0 +1,8 @@
+{
+  "name": "Archivus",
+  "description": "US Construction Services Partner - Remote construction documentation, drafting, and engineering support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
