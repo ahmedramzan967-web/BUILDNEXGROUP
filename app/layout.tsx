@@ -10,6 +10,9 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 export const metadata: Metadata = {
   title: 'Buildnex Group | US Construction Services Partner',
   description: 'Remote construction documentation, drafting, and engineering support for US contractors and building owners nationwide.',
+  icons: {
+    icon: '/images/buildnex_logo.png',
+  },
   keywords: 'construction documentation, drafting, engineering support, US contractors, permit sets, BIM modeling, project management',
   openGraph: {
     title: 'Buildnex Group | US Construction Services Partner',
