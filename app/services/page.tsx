@@ -70,7 +70,7 @@ export default function ServicesPage() {
   return (
     <PageWrapper>
       {/* HERO BANNER */}
-      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center bg-slate-50 overflow-hidden pt-20 border-b border-slate-200">
+      <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-white">
         <div className="absolute inset-0 z-0">
           <Image 
             src="/images/services_hero_construction.png"
@@ -80,26 +80,34 @@ export default function ServicesPage() {
             priority
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-white/70 mix-blend-overlay pointer-events-none"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
+          <div className="absolute inset-0 bg-white/60 mix-blend-overlay z-10 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 to-transparent z-10 pointer-events-none"></div>
         </div>
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-10">
-          <motion.h1 
+        
+        <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-7xl font-display font-bold text-navy tracking-tighter uppercase mb-6"
+            className="max-w-3xl"
           >
-            Our <span className="bg-gold px-2 pb-1 inline-block">Services</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl md:text-2xl text-slate-700 font-sans font-light leading-relaxed"
-          >
-            Comprehensive remote solutions for US construction professionals.
-          </motion.p>
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl md:text-7xl font-bold text-navy mb-6 leading-tight tracking-tighter uppercase"
+            >
+              Our <span className="bg-gold px-2 pb-1 inline-block">Services</span>
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-xl text-slate-700 mb-10 max-w-2xl leading-relaxed font-light"
+            >
+              Comprehensive remote solutions for US construction professionals.
+            </motion.p>
+          </motion.div>
         </div>
       </section>      {/* SERVICES GRID */}
       <section className="py-24 bg-slate-50">

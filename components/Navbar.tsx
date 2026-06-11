@@ -56,10 +56,10 @@ export default function Navbar() {
 
       <nav className="w-full bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
+        <div className="flex justify-between h-24">
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-2 group">
-              <Image src="/images/buildnex_logo.png" alt="Buildnex Group" width={230} height={60} className="object-contain max-h-16" priority referrerPolicy="no-referrer" />
+              <Image src="/images/buildnex_logo.png" alt="Buildnex Group" width={280} height={80} className="object-contain max-h-20" priority referrerPolicy="no-referrer" />
             </Link>
           </div>
 

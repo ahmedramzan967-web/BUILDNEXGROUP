@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 group w-fit">
               <div className="bg-white p-2 rounded-sm inline-block">
-                <Image src="/images/buildnex_logo.png" alt="Buildnex Group" width={230} height={60} className="object-contain max-h-16" unoptimized={true} />
+                <Image src="/images/buildnex_logo.png" alt="Buildnex Group" width={280} height={80} className="object-contain max-h-20" unoptimized={true} />
               </div>
             </Link>
             <p className="text-slate-400 font-sans text-sm leading-relaxed max-w-sm">
