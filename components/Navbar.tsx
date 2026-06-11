@@ -59,7 +59,7 @@ export default function Navbar() {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-2 group">
-              <Image src="/images/buildnex_logo.png" alt="Buildnex Group" width={180} height={40} className="object-contain max-h-12" priority referrerPolicy="no-referrer" />
+              <Image src="/images/buildnex_logo.png" alt="Buildnex Group" width={230} height={60} className="object-contain max-h-16" priority referrerPolicy="no-referrer" />
             </Link>
           </div>
 

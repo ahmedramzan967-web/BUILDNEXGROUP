@@ -176,18 +176,18 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="bg-white p-8 rounded-sm text-center border border-slate-200 max-w-sm w-full shadow-lg"
             >
-              <div className="w-48 h-48 bg-slate-100 rounded-full mx-auto mb-6 flex items-center justify-center overflow-hidden border-4 border-slate-50">
-                <img 
-                  src="https://drive.google.com/uc?export=view&id=1AGQ3OaKUWall4OMwd0t16GGPURuRyCp9"
-                  alt="CEO & Director of Operations"
-                  width={192}
-                  height={192}
+              <div className="w-48 h-48 bg-slate-100 rounded-full mx-auto mb-6 flex items-center justify-center overflow-hidden border-4 border-slate-50 relative">
+                <Image 
+                  src="https://lh3.googleusercontent.com/d/1ESDpM2TL-dlhhwr-mzI280TjW2TvzqZr"
+                  alt="Ahmed Ramzan, Founder & CEO"
+                  fill
+                  sizes="(max-width: 768px) 192vw, 192vw"
                   className="object-cover w-full h-full object-top transition-all duration-300"
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <h3 className="text-2xl font-bold mb-2 text-navy">Founder</h3>
-              <p className="text-slate-500 text-sm tracking-wide uppercase font-bold">CEO & Director of Operations</p>
+              <h3 className="text-2xl font-bold mb-2 text-navy">Ahmed Ramzan</h3>
+              <p className="text-slate-500 text-sm tracking-wide uppercase font-bold">FOUNDER & CEO</p>
             </motion.div>
           </div>
         </div>
