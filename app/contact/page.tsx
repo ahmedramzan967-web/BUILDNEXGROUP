@@ -35,7 +35,7 @@ export default function ContactPage() {
   return (
     <PageWrapper>
       {/* HERO BANNER */}
-      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center bg-navy-dark overflow-hidden pt-20">
+      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center bg-slate-50 overflow-hidden pt-20 border-b border-slate-200">
         <div className="absolute inset-0 z-0">
           <Image 
             src="/images/contact_hero_construction.png"
@@ -45,23 +45,23 @@ export default function ContactPage() {
             priority
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-navy/80 mix-blend-multiply pointer-events-none"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-navy/90 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-0 bg-white/70 mix-blend-overlay pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-10">
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold text-white tracking-tight mb-6"
+            className="text-4xl md:text-6xl font-display font-bold text-navy tracking-tight mb-6 uppercase"
           >
-            Get In <span className="text-gold">Touch</span>
+            Get In <span className="bg-gold px-2 pb-1 inline-block">Touch</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl md:text-2xl text-slate-300 font-light leading-relaxed"
+            className="text-xl md:text-2xl text-slate-700 font-sans font-light leading-relaxed"
           >
             We don&apos;t want to close a sale; we want to open a relationship.
           </motion.p>
@@ -69,7 +69,7 @@ export default function ContactPage() {
       </section>
 
       {/* CONTACT CONTENT */}
-      <section className="py-20 bg-slate-50 relative">
+      <section className="py-24 bg-white relative border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-8">
             
@@ -81,28 +81,28 @@ export default function ContactPage() {
               className="lg:col-span-2 space-y-8"
             >
               <div>
-                <h2 className="text-sm font-bold tracking-widest text-gold uppercase mb-2">Connect With Us</h2>
-                <h3 className="text-3xl font-bold text-navy mb-6">We&apos;re Ready to Help</h3>
-                <p className="text-slate-600 leading-relaxed mb-8">
+                <h2 className="text-xs font-bold font-sans tracking-[0.2em] bg-gold text-navy px-3 py-1 inline-block rounded-sm uppercase mb-3">Connect With Us</h2>
+                <h3 className="text-4xl font-display font-bold text-navy mb-6 uppercase">We&apos;re Ready to Help</h3>
+                <p className="text-slate-600 font-sans leading-relaxed mb-8">
                   Reach out to discuss your project requirements. Our dedicated team provides accurate quotes and reliable support for all your construction documentation needs.
                 </p>
               </div>
 
-              <div className="bg-white p-8 rounded-sm shadow-sm border border-slate-100 space-y-6">
+              <div className="bg-slate-50 p-8 rounded-sm shadow-sm border border-slate-200 space-y-6">
                 {[
-                  { icon: Mail, label: "Email", val: "hello@archivus.com" },
+                  { icon: Mail, label: "Email", val: "hello@buildnexgroup.com" },
                   { icon: Phone, label: "Phone / WhatsApp", val: "+1 (555) 123-4567" },
-                  { icon: Globe, label: "Website", val: "www.archivus.com" },
+                  { icon: Globe, label: "Website", val: "www.buildnexgroup.com" },
                   { icon: MapPin, label: "Service Area", val: "All 50 US States" },
                   { icon: Clock, label: "Response Time", val: "Within 24 Hours" }
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-sm bg-navy-dark text-gold flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-sm bg-white text-gold flex items-center justify-center shrink-0 border border-slate-200 shadow-sm">
                       <item.icon className="h-5 w-5" />
                     </div>
                     <div>
-                      <p className="text-sm text-slate-500 font-medium uppercase tracking-wide">{item.label}</p>
-                      <p className="text-navy font-bold text-lg">{item.val}</p>
+                      <p className="text-xs text-slate-500 font-medium uppercase tracking-[0.1em]">{item.label}</p>
+                      <p className="text-navy font-display font-bold text-lg">{item.val}</p>
                     </div>
                   </div>
                 ))}
@@ -116,19 +116,19 @@ export default function ContactPage() {
               transition={{ delay: 0.3 }}
               className="lg:col-span-3"
             >
-              <div className="bg-white p-8 md:p-10 rounded-sm shadow-xl border-t-4 border-gold">
-                <h3 className="text-2xl font-bold text-navy mb-8">Request a Quote</h3>
+              <div className="bg-white p-8 md:p-10 rounded-sm shadow-xl border border-slate-100 border-t-4 border-t-gold">
+                <h3 className="text-3xl font-display font-bold text-navy uppercase mb-8">Request a Quote</h3>
                 
                 {isSubmitted ? (
                   <div className="text-center py-12">
-                    <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <Mail className="h-10 w-10" />
+                    <div className="w-20 h-20 bg-green-50 text-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Mail className="h-10 w-10 text-green-500" />
                     </div>
-                    <h4 className="text-2xl font-bold text-navy mb-2">Message Sent!</h4>
-                    <p className="text-slate-600 mb-8">We&apos;ve received your request and will respond within 24 business hours.</p>
+                    <h4 className="text-2xl font-bold font-display text-navy mb-2 uppercase">Message Sent!</h4>
+                    <p className="text-slate-600 font-sans mb-8">We&apos;ve received your request and will respond within 24 business hours.</p>
                     <button 
                       onClick={() => setIsSubmitted(false)}
-                      className="bg-navy text-white px-6 py-3 font-bold rounded-sm hover:bg-gold transition-colors"
+                      className="bg-navy text-white px-6 py-3 font-bold font-sans rounded-sm hover:bg-gold hover:text-navy transition-colors"
                     >
                       Send Another Request
                     </button>
@@ -137,30 +137,30 @@ export default function ContactPage() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-slate-700">Full Name</label>
-                        <input required type="text" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all" placeholder="John Doe" />
+                        <label className="text-sm font-sans font-bold text-slate-700">Full Name</label>
+                        <input required type="text" className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all font-sans" placeholder="John Doe" />
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-slate-700">Company Name</label>
-                        <input required type="text" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all" placeholder="Acme Construction" />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label className="text-sm font-bold text-slate-700">Email Address</label>
-                        <input required type="email" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all" placeholder="john@company.com" />
-                      </div>
-                      <div className="space-y-2">
-                        <label className="text-sm font-bold text-slate-700">Phone Number</label>
-                        <input required type="tel" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all" placeholder="(555) 123-4567" />
+                        <label className="text-sm font-sans font-bold text-slate-700">Company Name</label>
+                        <input required type="text" className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all font-sans" placeholder="Acme Construction" />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-slate-700">Service Required</label>
-                        <select required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all text-slate-700">
+                        <label className="text-sm font-sans font-bold text-slate-700">Email Address</label>
+                        <input required type="email" className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all font-sans" placeholder="john@company.com" />
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-sm font-sans font-bold text-slate-700">Phone Number</label>
+                        <input required type="tel" className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all font-sans" placeholder="(555) 123-4567" />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label className="text-sm font-sans font-bold text-slate-700">Service Required</label>
+                        <select required className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all font-sans appearance-none">
                           <option value="">Select a service...</option>
                           {SERVICES_LIST.map((srv, i) => (
                             <option key={i} value={srv}>{srv}</option>
@@ -169,26 +169,26 @@ export default function ContactPage() {
                         </select>
                       </div>
                       <div className="space-y-2">
-                        <label className="text-sm font-bold text-slate-700">Project Location (State)</label>
-                        <input required type="text" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all" placeholder="e.g. Texas, TX" />
+                        <label className="text-sm font-sans font-bold text-slate-700">Project Location (State)</label>
+                        <input required type="text" className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all font-sans" placeholder="e.g. Texas, TX" />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <label className="text-sm font-bold text-slate-700">Project Description</label>
-                      <textarea required rows={5} className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all resize-none" placeholder="Please describe your project, timeline, and specific requirements..."></textarea>
+                      <label className="text-sm font-sans font-bold text-slate-700">Project Description</label>
+                      <textarea required rows={5} className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all resize-none font-sans" placeholder="Please describe your project, timeline, and specific requirements..."></textarea>
                     </div>
 
                     <button 
                       type="submit" 
                       disabled={isSubmitting}
-                      className="w-full bg-gold hover:bg-gold-hover text-white font-bold text-lg px-8 py-4 rounded-sm transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed shadow-md flex justify-center items-center"
+                      className="w-full bg-gold hover:bg-navy text-navy hover:text-white font-display font-bold uppercase tracking-wide text-lg px-8 py-4 rounded-sm transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed shadow-md flex justify-center items-center"
                     >
                       {isSubmitting ? (
-                        <span className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
+                        <span className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
                       ) : "Send My Request"}
                     </button>
-                    <p className="text-center text-sm text-slate-500 mt-4 font-medium">We typically respond within 24 business hours.</p>
+                    <p className="text-center text-sm text-slate-500 mt-4 font-sans font-medium">We typically respond within 24 business hours.</p>
                   </form>
                 )}
               </div>

@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <PageWrapper>
       {/* HERO SECTION */}
-      <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-navy-dark">
+      <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-white">
         <div className="absolute inset-0 z-0">
           <AnimatePresence>
             <motion.div
@@ -65,8 +65,8 @@ export default function Home() {
               />
             </motion.div>
           </AnimatePresence>
-          <div className="absolute inset-0 bg-navy/85 mix-blend-multiply z-10 pointer-events-none"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-navy/90 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-white/60 mix-blend-overlay z-10 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 to-transparent z-10 pointer-events-none"></div>
         </div>
 
         <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,17 +76,17 @@ export default function Home() {
             variants={STAGGER}
             className="max-w-3xl"
           >
-            <motion.h1 variants={FADE_UP} className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-              Your Complete US <span className="text-gold">Construction Services</span> Partner
+            <motion.h1 variants={FADE_UP} className="text-4xl md:text-6xl font-bold text-navy mb-6 leading-tight tracking-tight">
+              Your Complete US <span className="bg-gold px-2 pb-1 inline-block">Construction</span> Services Partner
             </motion.h1>
-            <motion.p variants={FADE_UP} className="text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed">
+            <motion.p variants={FADE_UP} className="text-xl text-slate-700 mb-10 max-w-2xl leading-relaxed">
               PE-Stamped Drawings. Expert Estimating. Full Project Documentation. Delivered On Time.
             </motion.p>
             <motion.div variants={FADE_UP} className="flex flex-col sm:flex-row gap-4">
-              <Link href="/services" className="bg-gold hover:bg-gold-hover text-white text-center font-bold px-8 py-4 rounded-sm transition-colors duration-300 text-lg shadow-lg">
+              <Link href="/services" className="bg-navy hover:bg-gold text-white hover:text-navy text-center font-bold px-8 py-4 rounded-sm transition-colors duration-300 text-lg shadow-lg">
                 View Our Services
               </Link>
-              <Link href="/contact" className="bg-white/10 hover:bg-white border-2 border-white text-white hover:text-navy text-center font-bold px-8 py-4 rounded-sm transition-all duration-300 text-lg">
+              <Link href="/contact" className="bg-transparent hover:bg-gold border-2 border-navy text-navy hover:text-navy text-center font-bold px-8 py-4 rounded-sm transition-all duration-300 text-lg">
                 Get a Free Quote
               </Link>
             </motion.div>
@@ -95,7 +95,7 @@ export default function Home() {
       </section>
 
       {/* WHY CHOOSE US */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -110,13 +110,13 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-slate-50 p-8 border border-slate-100 rounded-sm hover:shadow-lg transition-shadow group"
+                className="bg-white p-8 border hover:border-gold border-slate-200 rounded-sm shadow-sm hover:shadow-md hover:-translate-y-2 transition-all group"
               >
-                <div className="h-14 w-14 bg-navy text-gold flex items-center justify-center rounded-sm mb-6 group-hover:bg-gold group-hover:text-white transition-colors">
+                <div className="h-14 w-14 bg-navy text-gold flex items-center justify-center rounded-sm mb-6 group-hover:bg-gold group-hover:text-navy transition-colors">
                   <feature.icon className="h-7 w-7" />
                 </div>
-                <h3 className="text-xl font-bold text-navy mb-3">{feature.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{feature.desc}</p>
+                <h3 className="text-xl font-display font-bold text-navy mb-3 tracking-tight">{feature.title}</h3>
+                <p className="text-slate-600 font-sans leading-relaxed">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -124,14 +124,14 @@ export default function Home() {
       </section>
 
       {/* SERVICES OVERVIEW */}
-      <section className="py-24 bg-slate-50 border-y border-slate-200">
+      <section className="py-24 bg-white border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16 md:flex justify-between items-end">
             <div className="max-w-2xl">
-              <h2 className="text-sm font-bold tracking-widest text-gold uppercase mb-2">Our Expertise</h2>
-              <h3 className="text-3xl md:text-4xl font-bold text-navy tracking-tight">Comprehensive Construction Support</h3>
+              <h2 className="text-xs font-bold tracking-[0.2em] font-sans bg-gold text-navy px-3 py-1 inline-block rounded-sm uppercase mb-3">Our Expertise</h2>
+              <h3 className="text-4xl md:text-5xl font-display font-bold text-navy uppercase tracking-tight">Comprehensive<br/> Construction Support</h3>
             </div>
-            <Link href="/services" className="hidden md:flex items-center gap-2 text-navy font-bold hover:text-gold transition-colorsgroup pb-2">
+            <Link href="/services" className="hidden md:flex items-center gap-2 text-navy font-bold hover:text-gold transition-colors group pb-2">
               View All Services <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -148,10 +148,13 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.15 }}
-                className="bg-white p-8 xl:p-10 shadow-sm border border-slate-100 rounded-sm flex flex-col h-full"
+                className="bg-slate-50 p-8 xl:p-10 shadow-sm border border-slate-200 rounded-sm flex flex-col h-full hover:border-gold transition-colors group relative overflow-hidden"
               >
-                <service.icon className="h-10 w-10 text-gold mb-6 relative z-10" />
-                <h4 className="text-2xl font-bold text-navy mb-4 relative z-10">{service.title}</h4>
+                <div className="absolute top-0 right-0 p-8 text-slate-100 group-hover:text-gold/20 transition-colors pointer-events-none">
+                  <service.icon className="w-48 h-48 -mr-10 -mt-10" />
+                </div>
+                <service.icon className="h-10 w-10 text-navy mb-6 relative z-10 group-hover:text-gold transition-colors" />
+                <h4 className="text-2xl font-display font-bold text-navy mb-4 relative z-10">{service.title}</h4>
                 <p className="text-slate-600 mb-8 leading-relaxed flex-grow relative z-10">{service.desc}</p>
                 <Link href="/services" className="font-bold text-navy flex items-center gap-2 hover:text-gold transition-colors w-fit relative z-10 group">
                   Learn More <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -161,7 +164,7 @@ export default function Home() {
           </div>
           
           <div className="mt-10 md:hidden text-center">
-            <Link href="/services" className="inline-flex items-center gap-2 bg-navy text-white px-6 py-3 rounded-sm font-bold hover:bg-gold transition-colors">
+            <Link href="/services" className="inline-flex items-center gap-2 bg-gold text-navy px-6 py-3 rounded-sm font-bold font-display uppercase tracking-wide hover:bg-gold-hover transition-colors">
               View All Services
             </Link>
           </div>
@@ -169,11 +172,11 @@ export default function Home() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="py-24 bg-white relative overflow-hidden">
+      <section className="py-24 bg-slate-50 relative overflow-hidden border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-sm font-bold tracking-widest text-gold uppercase mb-2">Process</h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-navy tracking-tight">How Archivus Works</h3>
+            <h2 className="text-xs font-bold font-sans tracking-[0.2em] bg-gold text-navy px-3 py-1 inline-block rounded-sm uppercase mb-4">Process</h2>
+            <h3 className="text-4xl md:text-5xl font-display font-bold text-navy tracking-tight uppercase">How Buildnex Works</h3>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 xl:gap-8">
@@ -191,13 +194,13 @@ export default function Home() {
                 transition={{ delay: idx * 0.1 }}
                 className="relative text-center p-6"
               >
-                <div className="text-7xl font-black text-slate-100 mb-[-30px] relative z-0">{step.num}</div>
-                <div className="relative z-10 bg-white shadow-xl p-8 rounded-sm border-t-4 border-gold">
-                  <h4 className="text-xl font-bold text-navy mb-3">{step.title}</h4>
-                  <p className="text-slate-600 text-sm">{step.desc}</p>
+                <div className="text-7xl font-display font-black text-slate-200 mb-[-30px] relative z-0">{step.num}</div>
+                <div className="relative z-10 bg-white shadow-sm p-8 rounded-sm border-t-4 border-gold">
+                  <h4 className="text-xl font-display font-bold text-navy mb-3">{step.title}</h4>
+                  <p className="text-slate-600 font-sans text-sm">{step.desc}</p>
                 </div>
                 {idx < 3 && (
-                  <div className="hidden lg:block absolute top-[50%] right-[-20%] xl:right-[-30%] w-[40%] xl:w-[60%] border-t-2 border-dashed border-slate-200 z-0"></div>
+                  <div className="hidden lg:block absolute top-[50%] right-[-20%] xl:right-[-30%] w-[40%] xl:w-[60%] border-t-2 border-dashed border-slate-300 z-0 opacity-50"></div>
                 )}
               </motion.div>
             ))}
@@ -206,10 +209,10 @@ export default function Home() {
       </section>
 
       {/* STATS BAR */}
-      <section className="bg-navy py-16 relative">
+      <section className="bg-navy py-16 relative border-y border-slate-700">
         <div className="absolute inset-0 opacity-10 bg-[url('/images/about_desk_blueprints.png')] bg-cover mix-blend-overlay"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 text-center divide-x-0 md:divide-x md:divide-slate-700/50">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 text-center divide-x-0 md:divide-x md:divide-slate-700">
             {[
               { val: "500+", label: "Projects Completed" },
               { val: "98%", label: "Permit Approval Rate" },
@@ -223,8 +226,8 @@ export default function Home() {
                 transition={{ delay: idx * 0.1 }}
                 className="p-4"
               >
-                <div className="text-4xl md:text-5xl font-black text-gold mb-2">{stat.val}</div>
-                <div className="text-slate-300 font-medium tracking-wide uppercase text-sm">{stat.label}</div>
+                <div className="text-5xl md:text-6xl font-display font-black text-gold mb-2">{stat.val}</div>
+                <div className="text-white font-sans font-medium tracking-[0.1em] uppercase text-sm">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -232,13 +235,13 @@ export default function Home() {
       </section>
 
       {/* CTA BANNER */}
-      <section className="py-20 bg-gold">
+      <section className="py-24 bg-gold">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-navy mb-8 tracking-tight">
-            Ready to Start Your Project?
+          <h2 className="text-4xl md:text-6xl font-display font-bold text-navy mb-8 tracking-tighter uppercase">
+            Ready to Start<br/>Your Project?
           </h2>
-          <Link href="/contact" className="inline-block bg-navy hover:bg-navy-dark text-white font-bold text-lg px-10 py-5 rounded-sm shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-            Contact Us Today
+          <Link href="/contact" className="inline-block bg-navy hover:bg-slate-800 text-gold font-display font-bold text-xl px-12 py-6 rounded-sm shadow-[8px_8px_0_0_#111111] hover:shadow-[4px_4px_0_0_#111111] transition-all duration-300 hover:translate-x-1 hover:translate-y-1">
+            CONTACT US TODAY
           </Link>
         </div>
       </section>

@@ -1,15 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy: #1B3A6B;
-  --color-navy-dark: #122b52;
-  --color-gold: #C9A84C;
-  --color-gold-hover: #b59540;
+  --color-navy: #111111; /* Near black for text or dark elements */
+  --color-navy-dark: #000000; /* Pure black */
+  --color-gold: #b2ff00; /* Parrot Green */
+  --color-gold-hover: #9ee600; /* Darker Parrot Green */
+
+  --font-sans: var(--font-inter), sans-serif;
+  --font-display: var(--font-space), sans-serif;
 }
 
 @layer base {
   body {
-    background-color: #f8fafc; /* bg-slate-50 */
-    color: #1e293b; /* text-slate-800 */
+    background-color: #ffffff; /* White background */
+    color: #111111; /* Dark text */
   }
 }
+
+
