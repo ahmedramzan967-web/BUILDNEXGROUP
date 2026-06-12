@@ -8,19 +8,19 @@ const space = Space_Grotesk({ subsets: ['latin'], variable: '--font-space' });
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: 'Buildnex Group | US Construction Services Partner',
+  title: 'Bloxnet Group | US Construction Services Partner',
   description: 'Remote construction documentation, drafting, and engineering support for US contractors and building owners nationwide.',
   icons: {
-    icon: '/images/buildnex_logo.png',
+    icon: 'https://lh3.googleusercontent.com/d/1ci3pLsZZ1DHPc-QR7O36t8qEVfnyHYSa',
   },
   keywords: 'construction documentation, drafting, engineering support, US contractors, permit sets, BIM modeling, project management',
   openGraph: {
-    title: 'Buildnex Group | US Construction Services Partner',
+    title: 'Bloxnet Group | US Construction Services Partner',
     description: 'Remote construction documentation, drafting, and engineering support for US contractors and building owners nationwide.',
     type: 'website',
     locale: 'en_US',
-    url: 'https://buildnexgroup.com',
-    siteName: 'Buildnex Group',
+    url: 'https://bloxnetgroup.com',
+    siteName: 'Bloxnet Group',
   },
   robots: {
     index: true,

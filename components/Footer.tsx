@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 group w-fit">
               <div className="bg-white p-2 rounded-sm inline-block">
-                <Image src="/images/buildnex_logo.png" alt="Buildnex Group" width={280} height={80} className="object-contain max-h-20" unoptimized={true} />
+                <Image src="https://lh3.googleusercontent.com/d/1ci3pLsZZ1DHPc-QR7O36t8qEVfnyHYSa" alt="Bloxnet Group" width={280} height={80} className="object-contain max-h-20" unoptimized={true} referrerPolicy="no-referrer" />
               </div>
             </Link>
             <p className="text-slate-400 font-sans text-sm leading-relaxed max-w-sm">
@@ -72,7 +72,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-gold shrink-0" />
-                <span className="text-slate-400 font-sans text-sm">hello@buildnexgroup.com</span>
+                <span className="text-slate-400 font-sans text-sm">hello@bloxnetgroup.com</span>
               </li>
             </ul>
           </div>
@@ -83,7 +83,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-slate-800 bg-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-sans text-slate-500">
-          <p>© {currentYear} Buildnex Group. All Rights Reserved.</p>
+          <p>© {currentYear} Bloxnet Group. All Rights Reserved.</p>
           <div className="flex space-x-6">
             <a href="#" className="hover:text-gold transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-gold transition-colors">Terms of Service</a>

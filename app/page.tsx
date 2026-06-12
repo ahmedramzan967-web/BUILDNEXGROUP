@@ -176,7 +176,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-xs font-bold font-sans tracking-[0.2em] bg-gold text-navy px-3 py-1 inline-block rounded-sm uppercase mb-4">Process</h2>
-            <h3 className="text-4xl md:text-5xl font-display font-bold text-navy tracking-tight uppercase">How Buildnex Works</h3>
+            <h3 className="text-4xl md:text-5xl font-display font-bold text-navy tracking-tight uppercase">How Bloxnet Works</h3>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 xl:gap-8">

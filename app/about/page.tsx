@@ -18,7 +18,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 z-0">
           <Image 
             src="/images/about_hero_no_humans.jpg"
-            alt="Buildnex Group Office"
+            alt="Bloxnet Group Office"
             fill
             className="object-cover"
             priority
@@ -41,7 +41,7 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-6xl font-bold text-navy mb-6 leading-tight tracking-tight uppercase"
             >
-              About <span className="bg-gold px-2 pb-1 inline-block">Buildnex</span>
+              About <span className="bg-gold px-2 pb-1 inline-block">Bloxnet</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -69,7 +69,7 @@ export default function AboutPage() {
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={FADE_UP}
               className="text-xl text-slate-700 font-sans leading-relaxed"
             >
-              Buildnex Group is a professional firm offering complete construction documentation and design support to US clients. We leverage an international team and US-licensed PE partners to serve contractors, engineers, and building owners nationwide.
+              Bloxnet Group is a professional firm offering complete construction documentation and design support to US clients. We leverage an international team and US-licensed PE partners to serve contractors, engineers, and building owners nationwide.
             </motion.p>
           </div>
         </div>
@@ -174,17 +174,16 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-display font-bold mb-4 text-navy uppercase">Leadership Team</h2>
-            <p className="text-slate-600 font-sans max-w-2xl mx-auto">Decades of combined experience in construction engineering, design, and project management.</p>
           </div>
           
-          <div className="flex justify-center max-w-5xl mx-auto">
+          <div className="flex justify-center max-w-6xl mx-auto">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-sm text-center border border-slate-200 max-w-sm w-full shadow-lg"
+              className="bg-white p-8 rounded-sm border border-slate-200 w-full shadow-lg flex flex-col md:flex-row items-center md:items-start gap-12"
             >
-              <div className="w-48 h-48 bg-slate-100 rounded-full mx-auto mb-6 flex items-center justify-center overflow-hidden border-4 border-slate-50 relative">
+              <div className="shrink-0 w-64 h-64 bg-slate-100 rounded-full mx-auto md:mx-0 flex items-center justify-center overflow-hidden border-4 border-slate-50 relative">
                 <Image 
                   src="https://lh3.googleusercontent.com/d/1ESDpM2TL-dlhhwr-mzI280TjW2TvzqZr"
                   alt="Ahmed Ramzan, Founder & CEO"
@@ -194,8 +193,24 @@ export default function AboutPage() {
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <h3 className="text-2xl font-bold mb-2 text-navy">Ahmed Ramzan</h3>
-              <p className="text-slate-500 text-sm tracking-wide uppercase font-bold">FOUNDER & CEO</p>
+              <div className="text-left">
+                <h3 className="text-3xl font-bold mb-2 text-navy">Ahmed Ramzan</h3>
+                <p className="text-[#080404] text-sm tracking-wide uppercase font-bold mb-8">FOUNDER & CEO</p>
+                <div className="space-y-4 text-slate-600 font-sans leading-relaxed text-lg text-justify">
+                  <p>
+                    Ahmed Ramzan started his career in construction cost estimating — learning the industry from the ground up by working with US contractors, reading hundreds of drawing sets, and understanding exactly what makes a project succeed or fail on paper before it ever breaks ground.
+                  </p>
+                  <p>
+                    That foundation shaped everything. He founded Bloxnet Group with a clear mission: to give US contractors and building owners access to professional-grade construction documentation — PE-stamped drawings, accurate estimates, and complete project support — delivered by a team that genuinely understands how American construction works.
+                  </p>
+                  <p>
+                    With 15+ professionals under his leadership and clients across multiple US states, Ahmed has built a firm where quality is not a promise — it is a process. Every drawing set reviewed. Every estimate verified. Every deadline honored.
+                  </p>
+                  <p>
+                    "His clients don't just get documents. They get a partner who treats their project like his own."
+                  </p>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
