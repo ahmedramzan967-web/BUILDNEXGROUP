@@ -28,7 +28,7 @@ const STAGGER = {
 const HERO_IMAGES = [
   "/images/home_hero_construction.png",
   "/images/home_hero_2.png",
-  "/images/office_paperwork_blueprints.jpg"
+  "/images/home_hero_blueprints_edited.jpg"
 ];
 
 export default function Home() {

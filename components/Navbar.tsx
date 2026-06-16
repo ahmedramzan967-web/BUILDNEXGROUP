@@ -27,7 +27,7 @@ export default function Navbar() {
             <div className="flex flex-wrap justify-center lg:justify-start items-center gap-x-4 lg:gap-x-8 gap-y-2">
               <div className="flex items-center space-x-2 whitespace-nowrap">
                 <Phone className="h-4 w-4 text-gold" />
-                <span className="text-slate-300">Call Us: <span className="font-semibold text-white">+1 3464406862</span></span>
+                <span className="text-slate-300">Call Us: <span className="font-semibold text-white">+1 (346) 440 6862</span></span>
               </div>
               <div className="flex items-center space-x-2 whitespace-nowrap">
                 <MapPin className="h-4 w-4 text-gold" />
