@@ -18,7 +18,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 z-0">
           <Image 
             src="/images/about_hero_no_humans.jpg"
-            alt="Bloxnet Group Office"
+            alt="BlocksNet Group Office"
             fill
             className="object-cover"
             priority
@@ -41,7 +41,7 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-6xl font-bold text-navy mb-6 leading-tight tracking-tight uppercase"
             >
-              About <span className="bg-gold px-2 pb-1 inline-block">Bloxnet</span>
+              About <span className="bg-gold px-2 pb-1 inline-block">BlocksNet</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -69,7 +69,7 @@ export default function AboutPage() {
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={FADE_UP}
               className="text-xl text-slate-700 font-sans leading-relaxed"
             >
-              Bloxnet Group is a professional firm offering complete construction documentation and design support to US clients. We leverage an international team and US-licensed PE partners to serve contractors, engineers, and building owners nationwide.
+              BlocksNet Group is a professional firm offering complete construction documentation and design support to US clients. We leverage an international team and US-licensed PE partners to serve contractors, engineers, and building owners nationwide.
             </motion.p>
           </div>
         </div>
@@ -201,7 +201,7 @@ export default function AboutPage() {
                     Ahmed Ramzan started his career in construction cost estimating — learning the industry from the ground up by working with US contractors, reading hundreds of drawing sets, and understanding exactly what makes a project succeed or fail on paper before it ever breaks ground.
                   </p>
                   <p>
-                    That foundation shaped everything. He founded Bloxnet Group with a clear mission: to give US contractors and building owners access to professional-grade construction documentation — PE-stamped drawings, accurate estimates, and complete project support — delivered by a team that genuinely understands how American construction works.
+                    That foundation shaped everything. He founded BlocksNet Group with a clear mission: to give US contractors and building owners access to professional-grade construction documentation — PE-stamped drawings, accurate estimates, and complete project support — delivered by a team that genuinely understands how American construction works.
                   </p>
                   <p>
                     With 15+ professionals under his leadership and clients across multiple US states, Ahmed has built a firm where quality is not a promise — it is a process. Every drawing set reviewed. Every estimate verified. Every deadline honored.
