@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 group w-fit">
               <div className="bg-white p-2 rounded-sm inline-block">
-                <Image src="https://lh3.googleusercontent.com/d/13fxO9uiUJ3L0ur2ZkMq2L5meM4EYLyqY" alt="BlocksNet Group" width={280} height={80} className="object-contain max-h-20" unoptimized={true} referrerPolicy="no-referrer" />
+                <Image src="https://lh3.googleusercontent.com/d/11vFZb80wOjXeoqw_uArqu43sRk1yToQo" alt="BlocksNet Group" width={280} height={80} className="object-contain max-h-20" unoptimized={true} referrerPolicy="no-referrer" />
               </div>
             </Link>
             <p className="text-slate-400 font-sans text-sm leading-relaxed max-w-sm">

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: 'BlocksNet Group | US Construction Services Partner',
   description: 'Remote construction documentation, drafting, and engineering support for US contractors and building owners nationwide.',
   icons: {
-    icon: 'https://lh3.googleusercontent.com/d/13fxO9uiUJ3L0ur2ZkMq2L5meM4EYLyqY',
+    icon: 'https://lh3.googleusercontent.com/d/11vFZb80wOjXeoqw_uArqu43sRk1yToQo',
   },
   keywords: 'construction documentation, drafting, engineering support, US contractors, permit sets, BIM modeling, project management',
   openGraph: {
