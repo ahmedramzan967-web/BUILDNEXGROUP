@@ -98,9 +98,9 @@ export default function ContactPage() {
 
               <div className="bg-slate-50 p-8 rounded-sm shadow-sm border border-slate-200 space-y-6">
                 {[
-                  { icon: Mail, label: "Email", val: "hello@buildnexgroup.com" },
-                  { icon: Phone, label: "Phone / WhatsApp", val: "+1 (555) 123-4567" },
-                  { icon: Globe, label: "Website", val: "www.buildnexgroup.com" },
+                  { icon: Mail, label: "Email", val: "info@buildimizegroup.com" },
+                  { icon: Phone, label: "Phone / WhatsApp", val: "+1 3464406862" },
+                  { icon: Globe, label: "Website", val: "www.buildimizegroup.com" },
                   { icon: MapPin, label: "Service Area", val: "All 50 US States" },
                   { icon: Clock, label: "Response Time", val: "Within 24 Hours" }
                 ].map((item, idx) => (

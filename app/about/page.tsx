@@ -207,7 +207,7 @@ export default function AboutPage() {
                     With 15+ professionals under his leadership and clients across multiple US states, Ahmed has built a firm where quality is not a promise — it is a process. Every drawing set reviewed. Every estimate verified. Every deadline honored.
                   </p>
                   <p>
-                    "His clients don't just get documents. They get a partner who treats their project like his own."
+                    &quot;His clients don&apos;t just get documents. They get a partner who treats their project like his own.&quot;
                   </p>
                 </div>
               </div>
