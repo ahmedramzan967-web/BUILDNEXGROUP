@@ -59,7 +59,7 @@ export default function Navbar() {
         <div className="flex justify-between h-24">
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-2 group">
-              <Image src="https://lh3.googleusercontent.com/d/11vFZb80wOjXeoqw_uArqu43sRk1yToQo" alt="BlocksNet Group" width={280} height={80} className="object-contain max-h-20" priority referrerPolicy="no-referrer" />
+              <Image src="https://lh3.googleusercontent.com/d/11vFZb80wOjXeoqw_uArqu43sRk1yToQo" alt="Buildimize Group" width={280} height={80} className="object-contain max-h-20" priority referrerPolicy="no-referrer" />
             </Link>
           </div>
 
