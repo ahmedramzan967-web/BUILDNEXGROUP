@@ -3,13 +3,25 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { Menu, X, HardHat, Phone, MapPin, MousePointer2, Facebook, Linkedin, Search } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const pathname = usePathname();
+  const router = useRouter();
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+      setSearchQuery('');
+      setIsSearchOpen(false);
+    }
+  };
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -37,8 +49,8 @@ export default function Navbar() {
                 <MousePointer2 className="h-4 w-4 text-gold" />
                 <span className="text-slate-300">Follow Us:</span>
                 <div className="flex items-center space-x-2.5 ml-1">
-                  <a href="#" className="text-white hover:text-gold transition-colors"><Facebook className="h-3.5 w-3.5" /></a>
-                  <a href="#" className="text-white hover:text-gold transition-colors"><Linkedin className="h-3.5 w-3.5" /></a>
+                  <a href="https://www.facebook.com/profile.php?id=61590961409680" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors"><Facebook className="h-3.5 w-3.5" /></a>
+                  <a href="https://www.linkedin.com/company/buildimize-group/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold transition-colors"><Linkedin className="h-3.5 w-3.5" /></a>
                 </div>
               </div>
             </div>
@@ -46,7 +58,11 @@ export default function Navbar() {
               <Link href="/contact" className="border border-slate-600 text-slate-300 hover:border-gold hover:text-gold px-4 py-1 rounded-full font-medium transition-colors hidden sm:block">
                 Request Custom Quote
               </Link>
-              <button aria-label="Search" className="text-white hover:text-gold transition-colors">
+              <button 
+                aria-label="Search" 
+                className="text-white hover:text-gold transition-colors"
+                onClick={() => setIsSearchOpen(true)}
+              >
                 <Search className="h-4 w-4" />
               </button>
             </div>
@@ -136,6 +152,39 @@ export default function Navbar() {
         )}
       </AnimatePresence>
       </nav>
+
+      {/* Search Modal */}
+      <AnimatePresence>
+        {isSearchOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="absolute top-full left-0 w-full bg-white shadow-lg border-b border-slate-200 z-50 p-4"
+          >
+            <div className="max-w-3xl mx-auto flex items-center justify-between gap-4">
+              <form onSubmit={handleSearch} className="flex-1 flex items-center">
+                <Search className="h-5 w-5 text-slate-400 mr-3" />
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full text-lg text-slate-800 focus:outline-none font-sans"
+                  autoFocus
+                />
+              </form>
+              <button 
+                onClick={() => setIsSearchOpen(false)}
+                className="text-slate-400 hover:text-navy transition-colors p-2"
+                aria-label="Close search"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

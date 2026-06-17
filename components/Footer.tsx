@@ -21,9 +21,9 @@ export default function Footer() {
               Professional firm offering complete construction documentation and design support to US clients nationwide.
             </p>
             <div className="flex items-center space-x-4 pt-2">
-              <a href="#" className="text-slate-400 hover:text-gold transition-colors"><Linkedin className="h-5 w-5" /></a>
+              <a href="https://www.linkedin.com/company/buildimize-group/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-gold transition-colors"><Linkedin className="h-5 w-5" /></a>
               <a href="#" className="text-slate-400 hover:text-gold transition-colors"><Twitter className="h-5 w-5" /></a>
-              <a href="#" className="text-slate-400 hover:text-gold transition-colors"><Facebook className="h-5 w-5" /></a>
+              <a href="https://www.facebook.com/profile.php?id=61590961409680" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-gold transition-colors"><Facebook className="h-5 w-5" /></a>
             </div>
           </div>
 
