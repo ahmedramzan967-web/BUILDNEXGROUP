@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'motion/react';
 import PageWrapper from '@/components/PageWrapper';
-import { Mail, Phone, Globe, MapPin, Clock } from 'lucide-react';
+import { Mail, Phone, Globe, MapPin, Clock, Paperclip } from 'lucide-react';
 
 const SERVICES_LIST = [
   "Drawing & Design Services",
@@ -22,14 +22,33 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission
-    setTimeout(() => {
+    
+    const formElement = e.currentTarget;
+    const formData = new FormData(formElement);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/info@buildimizegroup.com", {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        setIsSubmitted(true);
+        formElement.reset();
+      } else {
+        alert("There was an error submitting your form. Please try again.");
+      }
+    } catch (error) {
+      alert("There was an error submitting your form. Please try again.");
+    } finally {
       setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 1500);
+    }
   };
 
   return (
@@ -38,7 +57,7 @@ export default function ContactPage() {
       <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-white">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/contact_hero_construction.png"
+            src="/images/contact_hero_documents.jpg"
             alt="Contact Office"
             fill
             className="object-cover"
@@ -142,33 +161,38 @@ export default function ContactPage() {
                     </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-6" encType="multipart/form-data">
+                    {/* FormSubmit Configuration */}
+                    <input type="hidden" name="_subject" value="New Service Request via Buildimize Group Website" />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_template" value="table" />
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <label className="text-sm font-sans font-bold text-slate-700">Full Name</label>
-                        <input required type="text" className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all font-sans" placeholder="John Doe" />
+                        <input required type="text" name="fullName" className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all font-sans" placeholder="John Doe" />
                       </div>
                       <div className="space-y-2">
                         <label className="text-sm font-sans font-bold text-slate-700">Company Name</label>
-                        <input required type="text" className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all font-sans" placeholder="Acme Construction" />
+                        <input required type="text" name="companyName" className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all font-sans" placeholder="Acme Construction" />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <label className="text-sm font-sans font-bold text-slate-700">Email Address</label>
-                        <input required type="email" className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all font-sans" placeholder="john@company.com" />
+                        <input required type="email" name="email" className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all font-sans" placeholder="john@company.com" />
                       </div>
                       <div className="space-y-2">
                         <label className="text-sm font-sans font-bold text-slate-700">Phone Number</label>
-                        <input required type="tel" className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all font-sans" placeholder="(555) 123-4567" />
+                        <input required type="tel" name="phone" className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all font-sans" placeholder="(555) 123-4567" />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <label className="text-sm font-sans font-bold text-slate-700">Service Required</label>
-                        <select required className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all font-sans appearance-none">
+                        <select required name="service" className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all font-sans appearance-none">
                           <option value="">Select a service...</option>
                           {SERVICES_LIST.map((srv, i) => (
                             <option key={i} value={srv}>{srv}</option>
@@ -178,13 +202,22 @@ export default function ContactPage() {
                       </div>
                       <div className="space-y-2">
                         <label className="text-sm font-sans font-bold text-slate-700">Project Location (State)</label>
-                        <input required type="text" className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all font-sans" placeholder="e.g. Texas, TX" />
+                        <input required type="text" name="projectLocation" className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all font-sans" placeholder="e.g. Texas, TX" />
                       </div>
                     </div>
 
                     <div className="space-y-2">
                       <label className="text-sm font-sans font-bold text-slate-700">Project Description</label>
-                      <textarea required rows={5} className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all resize-none font-sans" placeholder="Please describe your project, timeline, and specific requirements..."></textarea>
+                      <textarea required name="projectDescription" rows={5} className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all resize-none font-sans" placeholder="Please describe your project, timeline, and specific requirements..."></textarea>
+                    </div>
+
+                    <div className="space-y-2">
+                      <label className="text-sm font-sans font-bold text-slate-700 flex items-center gap-2">
+                        <Paperclip className="h-4 w-4" />
+                        Attach Files (Optional)
+                      </label>
+                      <input type="file" name="attachment" multiple className="w-full px-4 py-3 bg-slate-50 text-navy border border-slate-200 rounded-sm focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all font-sans file:mr-4 file:py-2 file:px-4 file:rounded-sm file:border-0 file:text-sm file:font-semibold file:bg-navy file:text-white hover:file:bg-slate-800 cursor-pointer" />
+                      <p className="text-xs text-slate-500 font-sans mt-1">Upload plans, blueprints, or reference documents.</p>
                     </div>
 
                     <button 
