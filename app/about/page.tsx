@@ -207,6 +207,11 @@ export default function AboutPage() {
                   <p>
                     &quot;His clients don&apos;t just get documents. They get a partner who treats their project like his own.&quot;
                   </p>
+                  <div className="mt-8">
+                    <a href="tel:+13464406862" className="inline-block bg-[#111111] hover:bg-gold hover:text-navy hover:border-gold text-white px-8 py-3 rounded-md font-bold font-sans transition-colors duration-300 shadow-sm border border-black uppercase text-sm tracking-wider">
+                      Call Ahmed Directly
+                    </a>
+                  </div>
                 </div>
               </div>
             </motion.div>
