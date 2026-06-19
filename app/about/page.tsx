@@ -14,40 +14,38 @@ export default function AboutPage() {
   return (
     <PageWrapper>
       {/* HERO BANNER */}
-      <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-white">
+      <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-navy">
         <div className="absolute inset-0 z-0">
           <Image 
             src="/images/about_hero_no_humans.jpg"
             alt="Buildimize Group Office"
             fill
-            className="object-cover"
+            className="object-cover opacity-30"
             priority
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-white/60 mix-blend-overlay z-10 pointer-events-none"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-white/95 to-transparent z-10 pointer-events-none"></div>
         </div>
         
-        <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl"
+            className="max-w-3xl mx-auto"
           >
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-6xl font-bold text-navy mb-6 leading-tight tracking-tight uppercase"
+              className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight uppercase"
             >
-              About <span className="bg-gold px-2 pb-1 inline-block">Buildimize</span>
+              About <span className="text-gold">Buildimize</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl text-slate-700 mb-10 max-w-2xl leading-relaxed font-light"
+              className="text-xl text-slate-200 mb-10 max-w-2xl mx-auto leading-relaxed font-sans"
             >
               Engineering excellence, precise documentation, and dedicated partnerships—building the foundation of America&apos;s infrastructure.
             </motion.p>
@@ -198,7 +196,7 @@ export default function AboutPage() {
                 <p className="text-[#080404] text-sm tracking-wide uppercase font-bold mb-8">FOUNDER & CEO</p>
                 <div className="space-y-4 text-slate-600 font-sans leading-relaxed text-lg text-justify">
                   <p>
-                    Ahmed Ramzan started his career in construction cost estimating — learning the industry from the ground up by working with US contractors, reading hundreds of drawing sets, and understanding exactly what makes a project succeed or fail on paper before it ever breaks ground.
+                    Ahmed Ramzan started his career in construction cost estimating — learning the industry from the ground up by working with US contractors, reading thousands of drawing sets, and understanding exactly what makes a project succeed or fail on paper before it ever breaks ground.
                   </p>
                   <p>
                     That foundation shaped everything. He founded Buildimize Group with a clear mission: to give US contractors and building owners access to professional-grade construction documentation — PE-stamped drawings, accurate estimates, and complete project support — delivered by a team that genuinely understands how American construction works.

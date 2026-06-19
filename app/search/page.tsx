@@ -105,7 +105,7 @@ function SearchResultsContent() {
           </h1>
           <p className="text-lg text-slate-600 font-sans flex items-center gap-2">
             <Search className="h-5 w-5 text-gold" />
-            Showing results for <span className="font-semibold text-navy">"{query}"</span>
+            Showing results for <span className="font-semibold text-navy">&quot;{query}&quot;</span>
           </p>
         </div>
 
@@ -145,7 +145,7 @@ function SearchResultsContent() {
             </div>
             <h3 className="text-xl font-sans font-bold text-navy mb-2">No results found</h3>
             <p className="text-slate-500 font-sans max-w-md mx-auto">
-              We couldn't find anything matching "{query}". Try adjusting your search term or refining your keywords.
+              We couldn&apos;t find anything matching &quot;{query}&quot;. Try adjusting your search term or refining your keywords.
             </p>
             <div className="mt-8">
               <Link href="/" className="inline-flex items-center gap-2 text-white bg-navy hover:bg-slate-800 px-6 py-3 font-medium transition-colors rounded-sm shadow-sm font-sans">

@@ -13,8 +13,8 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 group w-fit">
-              <div className="bg-white p-2 rounded-sm inline-block">
-                <Image src="https://lh3.googleusercontent.com/d/11vFZb80wOjXeoqw_uArqu43sRk1yToQo" alt="Buildimize Group" width={280} height={80} className="object-contain max-h-20" unoptimized={true} referrerPolicy="no-referrer" />
+              <div className="bg-white p-1 px-2 rounded inline-flex items-center shadow-sm">
+                <Image src="https://lh3.googleusercontent.com/d/11vFZb80wOjXeoqw_uArqu43sRk1yToQo" alt="Buildimize Group" width={180} height={40} className="object-contain max-h-10" unoptimized={true} referrerPolicy="no-referrer" />
               </div>
             </Link>
             <p className="text-slate-400 font-sans text-sm leading-relaxed max-w-sm">
@@ -48,10 +48,11 @@ export default function Footer() {
               <span className="absolute bottom-[-4px] left-0 w-1/2 h-1 bg-gold"></span>
             </h3>
             <ul className="space-y-3">
-              <li><Link href="/services" className="text-slate-400 font-sans hover:text-gold transition-colors text-sm uppercase tracking-wide">Drawing & Design</Link></li>
-              <li><Link href="/services" className="text-slate-400 font-sans hover:text-gold transition-colors text-sm uppercase tracking-wide">Cost Estimating</Link></li>
-              <li><Link href="/services" className="text-slate-400 font-sans hover:text-gold transition-colors text-sm uppercase tracking-wide">Permit Support</Link></li>
-              <li><Link href="/services" className="text-slate-400 font-sans hover:text-gold transition-colors text-sm uppercase tracking-wide">Project Management</Link></li>
+              <li><Link href="/services/drawings-and-permits" className="text-slate-400 font-sans hover:text-gold transition-colors text-sm uppercase tracking-wide">Drawings & Permits</Link></li>
+              <li><Link href="/services/3d-rendering" className="text-slate-400 font-sans hover:text-gold transition-colors text-sm uppercase tracking-wide">3D Rendering</Link></li>
+              <li><Link href="/services/shop-drawings-as-builts" className="text-slate-400 font-sans hover:text-gold transition-colors text-sm uppercase tracking-wide">Shop Drawings</Link></li>
+              <li><Link href="/services/bim-modeling" className="text-slate-400 font-sans hover:text-gold transition-colors text-sm uppercase tracking-wide">BIM Modeling</Link></li>
+              <li><Link href="/services/estimating-and-bidding" className="text-slate-400 font-sans hover:text-gold transition-colors text-sm uppercase tracking-wide">Estimating & Bidding</Link></li>
             </ul>
           </div>
 

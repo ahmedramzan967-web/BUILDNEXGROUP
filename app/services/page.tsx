@@ -70,40 +70,38 @@ export default function ServicesPage() {
   return (
     <PageWrapper>
       {/* HERO BANNER */}
-      <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-white">
+      <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-navy">
         <div className="absolute inset-0 z-0">
           <Image 
             src="/images/services_hero_construction.png"
             alt="Services"
             fill
-            className="object-cover"
+            className="object-cover opacity-30"
             priority
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-white/60 mix-blend-overlay z-10 pointer-events-none"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-white/95 to-transparent z-10 pointer-events-none"></div>
         </div>
         
-        <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl"
+            className="max-w-3xl mx-auto"
           >
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-7xl font-bold text-navy mb-6 leading-tight tracking-tighter uppercase"
+              className="text-4xl md:text-7xl font-bold text-white mb-6 leading-tight tracking-tighter uppercase"
             >
-              Our <span className="bg-gold px-2 pb-1 inline-block">Services</span>
+              Our <span className="text-gold">Services</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl text-slate-700 mb-10 max-w-2xl leading-relaxed font-light"
+              className="text-xl text-slate-200 mb-10 max-w-2xl mx-auto leading-relaxed font-sans"
             >
               Comprehensive remote solutions for US construction professionals.
             </motion.p>

@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <PageWrapper>
       {/* HERO SECTION */}
-      <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-white">
+      <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-navy">
         <div className="absolute inset-0 z-0">
           <AnimatePresence>
             <motion.div
@@ -59,34 +59,29 @@ export default function Home() {
                 src={HERO_IMAGES[currentImageIndex]}
                 alt={`Construction background ${currentImageIndex + 1}`}
                 fill
-                className="object-cover"
+                className="object-cover opacity-30"
                 priority
                 referrerPolicy="no-referrer"
               />
             </motion.div>
           </AnimatePresence>
-          <div className="absolute inset-0 bg-white/60 mix-blend-overlay z-10 pointer-events-none"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-white/95 to-transparent z-10 pointer-events-none"></div>
         </div>
 
-        <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
           <motion.div 
             initial="hidden"
             animate="visible"
             variants={STAGGER}
             className="max-w-3xl"
           >
-            <motion.h1 variants={FADE_UP} className="text-4xl md:text-6xl font-bold text-navy mb-6 leading-tight tracking-tight">
-              Your Complete US <span className="bg-gold px-2 pb-1 inline-block">Construction</span> Services Partner
+            <motion.h1 variants={FADE_UP} className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight tracking-tight uppercase">
+              Partnered with US-Licensed PEs. <span className="text-gold">Permit-Ready Drawings</span> at Half the Cost of Local Firms.
             </motion.h1>
-            <motion.p variants={FADE_UP} className="text-xl text-slate-700 mb-10 max-w-2xl leading-relaxed">
-              PE-Stamped Drawings. Expert Estimating. Full Project Documentation. Delivered On Time.
-            </motion.p>
             <motion.div variants={FADE_UP} className="flex flex-col sm:flex-row gap-4">
-              <Link href="/services" className="bg-navy hover:bg-gold text-white hover:text-navy text-center font-bold px-8 py-4 rounded-sm transition-colors duration-300 text-lg shadow-lg">
+              <Link href="/services/drawings-and-permits" className="bg-gold hover:bg-white text-navy text-center font-bold px-8 py-4 rounded-sm transition-colors duration-300 text-lg shadow-lg uppercase tracking-wider">
                 View Our Services
               </Link>
-              <Link href="/contact" className="bg-transparent hover:bg-gold border-2 border-navy text-navy hover:text-navy text-center font-bold px-8 py-4 rounded-sm transition-all duration-300 text-lg">
+              <Link href="/contact" className="bg-transparent hover:bg-white/10 border-2 border-white text-white hover:text-white text-center font-bold px-8 py-4 rounded-sm transition-all duration-300 text-lg uppercase tracking-wider">
                 Get a Free Quote
               </Link>
             </motion.div>
