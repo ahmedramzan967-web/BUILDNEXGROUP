@@ -1,50 +1,59 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import PageWrapper from '@/components/PageWrapper';
-import HeroImageSlider from '@/components/HeroImageSlider';
-import { CheckCircle2, MonitorPlay, Box, Layers, Image as ImageIcon, Video, Home } from 'lucide-react';
+import { CheckCircle2, CalendarDays, CalendarRange, Activity, Users, Layers, RotateCcw, FileSpreadsheet, FileDown } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '3D Rendering & Virtual Walkthroughs | Buildimize Group',
-  description: 'Photorealistic 3D renderings and virtual walkthroughs for US builders and developers. Present your project before breaking ground.',
+  title: 'Construction Project Scheduling | Buildimize Group',
+  description: 'CPM schedules, Gantt charts, and baseline planning for US contractors and developers. Primavera P6 and MS Project. Fast turnaround, all 50 states.',
 };
 
 const INCLUDED_ITEMS = [
-  { icon: Home, text: "Exterior 3D renderings (day & night views)" },
-  { icon: Box, text: "Interior 3D renderings" },
-  { icon: Video, text: "Animated virtual walkthrough videos (MP4)" },
-  { icon: MonitorPlay, text: "Bird's-eye / drone-view renders" },
-  { icon: Layers, text: "Multiple revision rounds" },
-  { icon: ImageIcon, text: "High-resolution files for print and web" }
+  { icon: CalendarDays, text: "Baseline CPM Schedule (Primavera P6 / MS Project)" },
+  { icon: CalendarRange, text: "Gantt chart with milestone tracking" },
+  { icon: Activity, text: "Critical path and float analysis" },
+  { icon: Users, text: "Resource-loaded schedules" },
+  { icon: Layers, text: "Phased scheduling: pre-construction, construction, closeout" },
+  { icon: RotateCcw, text: "Schedule recovery plans for delayed projects" },
+  { icon: FileSpreadsheet, text: "Monthly update reports" },
+  { icon: FileDown, text: "PDF and native file delivery (.xer, .mpp)" }
 ];
 
 const WHY_CHOOSE_US = [
-  "True photorealistic quality using industry-leading software.",
-  "Tailored styling matching specific interior/exterior design briefs.",
-  "Accelerate sales and approvals by showing stakeholders the finished product."
+  "US construction knowledge — we understand permit timelines, inspection holds, and trade sequencing",
+  "Baseline schedules delivered in 3–5 business days",
+  "Lender, bonding, and owner-ready documentation"
 ];
 
 const PROCESS_STEPS = [
-  { title: "Review Reference Files", desc: "We review your 2D plans, sketches, materials, and mood boards." },
-  { title: "3D Modeling", desc: "We build the base 3D geometry of the structure and site." },
-  { title: "Lighting & Texturing", desc: "Materials, furnishings, landscaping, and lighting are applied." },
-  { title: "Final Render & Review", desc: "We deliver drafts for your review, and then provide the final ultra-high-resolution media." }
+  { title: "Share Project Info", desc: "Send drawings, scope, and contract milestones" },
+  { title: "We Build the Schedule", desc: "CPM schedule with all activities, durations, and dependencies" },
+  { title: "Review & Revise", desc: "We incorporate your feedback and finalize the baseline" },
+  { title: "Deliver", desc: "Receive final files plus ongoing update support" }
 ];
 
-export default function RenderingPage() {
+export default function SchedulingPage() {
   return (
     <PageWrapper>
       {/* HERO SECTION */}
       <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-navy">
-        <div className="absolute inset-0 z-0 bg-navy">
-          <HeroImageSlider />
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80"
+            alt="project manager reviewing construction schedule chart"
+            fill
+            className="object-cover opacity-30"
+            priority
+            referrerPolicy="no-referrer"
+          />
         </div>
         <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 uppercase tracking-tight">
-            3D Rendering & <span className="text-gold">Walkthroughs</span>
+            Keep Your Project <span className="text-gold">On Time</span>, Every Time
           </h1>
           <p className="text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed font-sans">
-            Photorealistic exterior and interior renderings, plus animated virtual walkthroughs — ideal for client presentations, marketing, and pre-sales.
+            CPM Scheduling, Gantt Charts & Baseline Planning for US Construction Projects
           </p>
         </div>
       </section>
@@ -56,13 +65,13 @@ export default function RenderingPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-navy uppercase tracking-wide">What&apos;s Included</h2>
             <div className="w-24 h-1 bg-gold mx-auto mt-6"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {INCLUDED_ITEMS.map((item, idx) => (
               <div key={idx} className="bg-white p-8 border border-slate-200 rounded-sm hover:border-gold transition-colors text-center group">
                 <div className="w-16 h-16 mx-auto bg-slate-50 border border-slate-100 flex items-center justify-center rounded-full mb-6 group-hover:bg-gold/10 transition-colors">
                   <item.icon className="h-8 w-8 text-gold" />
                 </div>
-                <h3 className="text-lg font-bold text-navy font-sans">{item.text}</h3>
+                <h3 className="text-[17px] font-bold text-navy font-sans leading-tight">{item.text}</h3>
               </div>
             ))}
           </div>
@@ -113,12 +122,12 @@ export default function RenderingPage() {
            <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M0 40L40 0H20L0 20M40 40V20L20 40" fill="none" stroke="currentColor" strokeWidth="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#grid-pattern)"/></svg>
         </div>
         <div className="relative z-10 max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 uppercase tracking-wide">Ready to get started?</h2>
-          <p className="text-lg text-slate-300 font-sans mb-10 max-w-2xl mx-auto">
-            Contact us today to review your project scope and get a custom quote.
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 uppercase tracking-wide">Need a schedule that keeps your project on track?</h2>
+          <p className="text-xl pb-3 text-slate-300 font-sans mb-10 max-w-2xl mx-auto">
+            Contact us today.
           </p>
           <Link href="/contact" className="inline-block bg-gold text-navy hover:bg-white font-bold text-lg px-10 py-4 rounded-sm transition-colors duration-300 uppercase tracking-widest shadow-lg">
-            Contact Us Today
+            Get a Free Consultation
           </Link>
         </div>
       </section>

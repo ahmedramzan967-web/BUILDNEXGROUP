@@ -31,6 +31,7 @@ export default function Navbar() {
     { name: 'Shop Drawings & As Built Drawings', path: '/services/shop-drawings-as-builts' },
     { name: 'BIM Modeling', path: '/services/bim-modeling' },
     { name: 'Estimating & Bidding', path: '/services/estimating-and-bidding' },
+    { name: 'Project Scheduling', path: '/services/project-scheduling' },
     { name: 'All Services', path: '/services' },
   ];
 

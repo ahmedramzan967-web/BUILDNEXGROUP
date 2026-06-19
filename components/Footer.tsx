@@ -53,6 +53,7 @@ export default function Footer() {
               <li><Link href="/services/shop-drawings-as-builts" className="text-slate-400 font-sans hover:text-gold transition-colors text-sm uppercase tracking-wide">Shop Drawings</Link></li>
               <li><Link href="/services/bim-modeling" className="text-slate-400 font-sans hover:text-gold transition-colors text-sm uppercase tracking-wide">BIM Modeling</Link></li>
               <li><Link href="/services/estimating-and-bidding" className="text-slate-400 font-sans hover:text-gold transition-colors text-sm uppercase tracking-wide">Estimating & Bidding</Link></li>
+              <li><Link href="/services/project-scheduling" className="text-slate-400 font-sans hover:text-gold transition-colors text-sm uppercase tracking-wide">Project Scheduling</Link></li>
             </ul>
           </div>
 
