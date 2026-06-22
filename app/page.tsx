@@ -78,7 +78,7 @@ export default function Home() {
               Partnered with US-Licensed PEs. <span className="text-gold">Permit-Ready Drawings</span> at Half the Cost of Local Firms.
             </motion.h1>
             <motion.div variants={FADE_UP} className="flex flex-col sm:flex-row gap-4">
-              <Link href="/services/drawings-and-permits" className="bg-gold hover:bg-white text-navy text-center font-bold px-8 py-4 rounded-sm transition-colors duration-300 text-lg shadow-lg uppercase tracking-wider">
+              <Link href="/services" className="bg-gold hover:bg-white text-navy text-center font-bold px-8 py-4 rounded-sm transition-colors duration-300 text-lg shadow-lg uppercase tracking-wider">
                 View Our Services
               </Link>
               <Link href="/contact" className="bg-transparent hover:bg-white/10 border-2 border-white text-white hover:text-white text-center font-bold px-8 py-4 rounded-sm transition-all duration-300 text-lg uppercase tracking-wider">

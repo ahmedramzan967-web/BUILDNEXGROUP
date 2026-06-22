@@ -80,7 +80,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-24 gap-4 xl:gap-8">
           <div className="flex items-center flex-shrink-0">
             <Link href="/" className="flex items-center gap-2 group">
-              <Image src="https://lh3.googleusercontent.com/d/11vFZb80wOjXeoqw_uArqu43sRk1yToQo" alt="Buildimize Group" width={280} height={80} className="object-contain max-h-16 lg:max-w-[200px] xl:max-w-[280px]" priority referrerPolicy="no-referrer" />
+              <Image src="https://drive.google.com/uc?export=view&id=1Cabu_ikPTTeJd7HfUnLjepaaADh7puaz" alt="Buildimize Group" width={280} height={80} className="object-contain max-h-16 lg:max-w-[200px] xl:max-w-[280px]" priority referrerPolicy="no-referrer" />
             </Link>
           </div>
 

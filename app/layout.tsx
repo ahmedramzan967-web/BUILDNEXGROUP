@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: 'Buildimize Group | US Construction Services Partner',
   description: 'Remote construction documentation, drafting, and engineering support for US contractors and building owners nationwide.',
   icons: {
-    icon: 'https://lh3.googleusercontent.com/d/11vFZb80wOjXeoqw_uArqu43sRk1yToQo',
+    icon: 'https://drive.google.com/uc?export=view&id=1Cabu_ikPTTeJd7HfUnLjepaaADh7puaz',
   },
   keywords: 'construction documentation, drafting, engineering support, US contractors, permit sets, BIM modeling, project management',
   openGraph: {
