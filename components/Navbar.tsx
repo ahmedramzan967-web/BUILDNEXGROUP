@@ -79,8 +79,8 @@ export default function Navbar() {
       <div className="w-full max-w-full mx-auto px-2 sm:px-4 lg:px-6 xl:px-8">
         <div className="flex justify-between items-center h-24 gap-4 xl:gap-8">
           <div className="flex items-center flex-shrink-0">
-            <Link href="/" className="flex items-center gap-2 group">
-              <Image src="https://drive.google.com/uc?export=view&id=1Cabu_ikPTTeJd7HfUnLjepaaADh7puaz" alt="Buildimize Group" width={280} height={80} className="object-contain max-h-16 lg:max-w-[200px] xl:max-w-[280px]" priority referrerPolicy="no-referrer" />
+            <Link href="/" className="flex items-center gap-2 group w-[160px] lg:w-[180px] xl:w-[200px]">
+              <Image src="https://lh3.googleusercontent.com/d/1Cabu_ikPTTeJd7HfUnLjepaaADh7puaz" alt="Buildimize Group" width={200} height={60} className="w-full h-auto object-contain" unoptimized priority referrerPolicy="no-referrer" />
             </Link>
           </div>
 

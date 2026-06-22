@@ -13,8 +13,8 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 group w-fit">
-              <div className="bg-white p-3 rounded-sm inline-flex items-center shadow-sm">
-                <Image src="https://drive.google.com/uc?export=view&id=1Cabu_ikPTTeJd7HfUnLjepaaADh7puaz" alt="Buildimize Group" width={280} height={80} className="object-contain max-h-16 w-auto" unoptimized={true} referrerPolicy="no-referrer" />
+              <div className="bg-white p-1 rounded-sm inline-flex items-center shadow-sm w-[130px] lg:w-[150px]">
+                <Image src="https://lh3.googleusercontent.com/d/1Cabu_ikPTTeJd7HfUnLjepaaADh7puaz" alt="Buildimize Group" width={200} height={60} className="w-full h-auto object-contain" unoptimized referrerPolicy="no-referrer" />
               </div>
             </Link>
             <p className="text-slate-400 font-sans text-sm leading-relaxed max-w-sm">
